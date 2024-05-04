@@ -54,4 +54,8 @@ Route::middleware([
     Route::get('/user-requests', function () {
         return view('mentors.requests');
     })->name('mentor.requests');
+
+    Route::get('/assignment', function () {
+        return view('assignment');
+    })->name('assignment');
 });

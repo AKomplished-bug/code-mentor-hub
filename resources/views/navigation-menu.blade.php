@@ -17,6 +17,11 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('assignment') }}" :active="request()->routeIs('assignment')">
+                        {{ __('Assignment') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="{{ route('community') }}" :active="request()->routeIs('community')">
                         {{ __('Community') }}
                     </x-nav-link>
@@ -218,6 +223,8 @@
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>
                 </form>
+
+                
 
                 <!-- Team Management -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
